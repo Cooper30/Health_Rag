@@ -1,0 +1,30 @@
+services:
+  - type: web
+    name: health-rag
+    env: python
+    plan: free
+    region: oregon
+    branch: main
+
+    buildCommand: |
+      pip install --upgrade pip
+      pip install -r requirements.txt
+      python rag/build_index.py --input ./data/OtherQA.csv --out_dir ./vectorstore/faiss_index
+
+    startCommand: |
+      streamlit run app.py --server.port $PORT --server.address 0.0.0.0
+
+    envVars:
+      - key: INDEX_DIR
+        value: vectorstore/faiss_index
+      - key: EMBEDDING_MODEL
+        value: intfloat/multilingual-e5-base
+      - key: GEMINI_MODEL
+        value: gemini-2.5-pro
+      - key: CHUNK_SIZE
+        value: "512"
+      - key: CHUNK_OVERLAP
+        value: "64"
+      - key: TOP_K
+        value: "5"
+      # GOOGLE_API_KEY'i repoya yazma, Render panelinden Secrets olarak ekle.
