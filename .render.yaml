@@ -8,8 +8,7 @@ services:
 
     buildCommand: |
       pip install --upgrade pip
-      pip install -r requirements.txt
-      # FAISS indeksini build aşamasında üret (python3!)
+      pip install --no-cache-dir -r requirements.txt
       python3 rag/build_index.py --input ./data/OtherQA.csv --out_dir ./vectorstore/faiss_index
 
     startCommand: |
@@ -28,4 +27,4 @@ services:
         value: "64"
       - key: TOP_K
         value: "5"
-      # GOOGLE_API_KEY: Render panelinden Secrets olarak ekleyin
+      # GOOGLE_API_KEY'i Render panelinden gizli olarak ekledin, doğru.
