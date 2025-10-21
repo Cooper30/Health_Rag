@@ -6,10 +6,13 @@ services:
     region: oregon
     branch: main
 
+    # (Opsiyonel) Python'ı sabitlemek istersen: 3.11 veya 3.10 gibi
+    # pythonVersion: 3.11.9
+
     buildCommand: |
-      pip install --upgrade pip
-      pip install -r requirements.txt
-      python rag/build_index.py --input ./data/OtherQA.csv --out_dir ./vectorstore/faiss_index
+      pip3 install --upgrade pip
+      pip3 install -r requirements.txt
+      python3 rag/build_index.py --input ./data/OtherQA.csv --out_dir ./vectorstore/faiss_index
 
     startCommand: |
       streamlit run app.py --server.port $PORT --server.address 0.0.0.0
@@ -27,4 +30,3 @@ services:
         value: "64"
       - key: TOP_K
         value: "5"
-      # GOOGLE_API_KEY'i repoya yazma, Render panelinden Secrets olarak ekle.
