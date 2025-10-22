@@ -21,9 +21,10 @@ Health RAG Chatbot şu RAG hattını uygular:
 
 ---
 
-## 🌐 Deploy Link (isteğe bağlı)
+## ## 🌐 Deploy Link
 
-> Örnek: [https://health-rag.onrender.com](https://health-rag.onrender.com) *(henüz deploy edilmediyse bu alan boş kalabilir)*
+👉 [https://healthrag-6y4sux3m6n8o5kxlmtbx.streamlit.app](https://healthrag-6y4sux3m6nyn8o5kxlmtxx.streamlit.app)
+
 
 ---
 
