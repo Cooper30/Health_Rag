@@ -26,6 +26,7 @@ Health RAG Chatbot şu RAG hattını uygular:
 👉 [https://healthrag-6y4sux3m6n8o5kxlmtbx.streamlit.app](https://healthrag-6y4sux3m6nyn8o5kxlmtxx.streamlit.app)
 
 
+
 ---
 
 ## 📊 Dataset
@@ -114,7 +115,7 @@ python rag/build_index.py --input ./data/OtherQA.csv --out_dir ./vectorstore/fai
 ```bash
 streamlit run app.py
 ```
-👉 Tarayıcınızda http://localhost:5000 adresine gidin
+👉 Tarayıcınızda http://localhost:8501 adresine gidin
 
 ---
 
