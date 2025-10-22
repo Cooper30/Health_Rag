@@ -113,7 +113,7 @@ python rag/build_index.py --input ./data/OtherQA.csv --out_dir ./vectorstore/fai
 ```bash
 streamlit run app.py
 ```
-👉 [http://localhost:8501](http://localhost:8501)
+👉 Tarayıcınızda http://localhost:5000 adresine gidin
 
 ---
 
@@ -174,7 +174,3 @@ Eğer proje hakkında soruların varsa:
 
 ---
 
-## 📝 Lisans
-
-MIT © 2025  
-Bu proje **Akbank GenAI Bootcamp** kapsamında geliştirilmiştir.
